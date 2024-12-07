@@ -1,4 +1,3 @@
-/* Archivo: styles.css */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -75,4 +74,57 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #e8f5e9; /* Verde claro */
+    border: 1px solid #004d40;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #004d40;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card button {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #00796b;
 }
