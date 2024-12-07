@@ -5,21 +5,21 @@ const productos = [
         nombre: "Chanclas Addilet Classic",
         descripcion: "Comodidad y estilo en un solo par.",
         precio: 25.99,
-        imagen: "Adi_AzulFrancia.jpg"
+        imagen: "./assets/image/Adi_AzulFrancia.jpg"
     },
     {
         id: 2,
         nombre: "Chanclas Sport Edition",
         descripcion: "Perfectas para el día a día.",
         precio: 29.99,
-        imagen: "Adi_Blanca.jpg"
+        imagen: "./assets/image/Adi_Blanca.jpg"
     },
     {
         id: 3,
         nombre: "Chanclas Relax Foam",
         descripcion: "Máxima comodidad para tus pies.",
         precio: 34.99,
-        imagen: "Adi_Gris.jpg"
+        imagen: "./assets/image/Adi_Gris.jpg"
     }
 ];
 
