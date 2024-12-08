@@ -5,21 +5,21 @@ const productos = [
         nombre: "Chanclas Addilet Classic",
         descripcion: "Comodidad y estilo en un solo par.",
         precio: 25.99,
-        imagen: "./assets/image/Adi_AzulFrancia.jpg"
+        imagen: "./assets/image/Adilette/Adi_AzulFrancia.jpg"
     },
     {
         id: 2,
         nombre: "Chanclas Sport Edition",
         descripcion: "Perfectas para el día a día.",
         precio: 29.99,
-        imagen: "./assets/image/Adi_Blanca.jpg"
+        imagen: "./assets/image/Adilette/Adi_Blanca.jpg"
     },
     {
         id: 3,
         nombre: "Chanclas Relax Foam",
         descripcion: "Máxima comodidad para tus pies.",
         precio: 34.99,
-        imagen: "./assets/image/Adi_Gris.jpg"
+        imagen: "./assets/image/Adilette/Adi_Gris.jpg"
     }
 ];
 
@@ -48,7 +48,7 @@ function renderizarProductos() {
 // Función para añadir productos al carrito (inicialmente solo muestra un mensaje)
 function añadirAlCarrito(id) {
     const producto = productos.find(p => p.id === id);
-    console.log(Producto añadido: ${producto.nombre});
+    console.log(`Producto añadido: ${producto.nombre}`);
 }
 
 // Renderizar los productos al cargar la página

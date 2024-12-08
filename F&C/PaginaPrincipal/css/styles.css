@@ -128,3 +128,9 @@ footer {
 .card button:hover {
     background-color: #00796b;
 }
+
+.carousel-img {
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
