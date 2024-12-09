@@ -2,24 +2,59 @@
 const productos = [
     {
         id: 1,
-        nombre: "Chanclas Addilet Classic",
+        nombre: "Chanclas Azul Francia",
         descripcion: "Comodidad y estilo en un solo par.",
         precio: 25.99,
         imagen: "./assets/image/Adilette/Adi_AzulFrancia.jpg"
     },
-    {
+     {
         id: 2,
-        nombre: "Chanclas Sport Edition",
+        nombre: "Chanclas Blancas",
         descripcion: "Perfectas para el día a día.",
         precio: 29.99,
         imagen: "./assets/image/Adilette/Adi_Blanca.jpg"
     },
     {
         id: 3,
-        nombre: "Chanclas Relax Foam",
+        nombre: "Chanclas Gris",
         descripcion: "Máxima comodidad para tus pies.",
         precio: 34.99,
         imagen: "./assets/image/Adilette/Adi_Gris.jpg"
+    },
+    {
+        id: 4,
+        nombre: "Chanclas Negras",
+        descripcion: "Perfectas para el día a día.",
+        precio: 29.99,
+        imagen: "./assets/image/Adilette/Adi_Negra.jpg"
+    },
+    {
+        id: 5,
+        nombre: "Chanclas Rojas",
+        descripcion: "Perfectas para el día a día.",
+        precio: 29.99,
+        imagen: "./assets/image/Adilette/Adi_Roja.jpg"
+    },
+    {
+        id: 6,
+        nombre: "Chanclas Rosa",
+        descripcion: "Perfectas para el día a día.",
+        precio: 29.99,
+        imagen: "./assets/image/Adilette/Adi_Rosa.jpg"
+    },
+    {
+        id: 7,
+        nombre: "Chanclas Verdes",
+        descripcion: "Perfectas para el día a día.",
+        precio: 29.99,
+        imagen: "./assets/image/Adilette/Adi_Verde.jpg"
+    },
+    {
+        id: 8,
+        nombre: "Chanclas Verde Lima",
+        descripcion: "Perfectas para el día a día.",
+        precio: 29.99,
+        imagen: "./assets/image/Adilette/Adi_VerdeLima.jpg"
     }
 ];
 
