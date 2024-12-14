@@ -15,6 +15,7 @@
         <div class="logo">
             <img src="./assets/image/logo.png" alt="F&C del sur logo">
         </div>
+        
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -23,6 +24,46 @@
                 <li><a href="#reseñas">Reseñas</a></li>
             </ul>
         </nav>
+          
+        <!--<div class="cart-container">
+          <img src="./assets/image/cart-icon.png" alt="Carrito" class="cart-icon">
+          <span id="cart-count">0</span>  Contador de productos
+        </div-->
+
+            <!-- Ícono del carrito -->
+        <div class="cart-icon" id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+
+            <!-- Modal del carrito -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-table-body">
+                    <!-- Aquí se llenarán los productos dinámicamente -->
+                </tbody>
+              </table>
+              <p class="text-end fw-bold" id="cart-total">Total: $0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+               
     </header>
     
     <main>
@@ -66,6 +107,28 @@
             <div class="productos-container row" id="productos-container">
                 <!-- Aquí se generarán las cards de productos -->
             </div>
+        </section>
+        
+        <section id="reseñas">
+          <h2>Reseñas de nuestros clientes</h2>
+          <div class="reseñas-container">
+            <div class="reseña">
+              <p>"Excelente calidad, muy cómodas. ¡Recomendadas!"</p>
+              <span>- María López</span>
+            </div>
+            <div class="reseña">
+              <p>"El envío fue rápido y las chanclas son tal cual se describen."</p>
+              <span>- Juan Pérez</span>
+            </div>
+            <div class="reseña">
+              <p>"¡Me encantan! Perfectas para la playa."</p>
+              <span>- Sofía Martínez</span>
+            </div>
+            <div class="reseña">
+              <p>"Buena relación calidad-precio. Compraré de nuevo."</p>
+              <span>- Carlos García</span>
+            </div>
+          </div>
         </section>
         
         <section id="contacto">
