@@ -81,10 +81,10 @@ function renderizarProductos() {
 }
 
 // Función para añadir productos al carrito (inicialmente solo muestra un mensaje)
-//function añadirAlCarrito(id) {
-//    const producto = productos.find(p => p.id === id);
-//    console.log(`Producto añadido: ${producto.nombre}`);
-//}
+function añadirAlCarrito(id) {
+    const producto = productos.find(p => p.id === id);
+   console.log(`Producto añadido: ${producto.nombre}`);
+}
 
 // Renderizar los productos al cargar la página
 document.addEventListener("DOMContentLoaded", renderizarProductos);
@@ -107,6 +107,7 @@ function añadirAlCarrito(id) {
     }
 
     actualizarCarrito();
+    //calcularTotal();
     guardarCarrito();
 }
 
@@ -156,9 +157,8 @@ function mostrarCarrito() {
                 <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
             </td>
         `;
-        cartTableBody.appendChild(fila);
+        cartTableBody.appendChild(fila);    
     });
-
     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
@@ -191,7 +191,17 @@ document.getElementById("cart-icon").addEventListener("click", () => {
     cartModal.show();
 });
 
-function calcularTotal() {
-    let total = carrito.reduce((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0);
-    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links ul");
+    navLinks.classList.toggle("show")
 }
+
+// Seleccionamos el formulario
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (event) {
+    
+    setTimeout(() => {
+        form.reset(); // Limpia todos los campos
+    }, 100); 
+});

@@ -9,17 +9,26 @@ body {
 header {
     background-color: #004d40; /* Verde Benetton oscuro */
     color: white;
-    padding: 20px;
+    display: flex;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header .logo img {
-    width: 100px;
+    width: 75px;
 }
 
-nav ul {
+.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links ul {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -27,13 +36,51 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+.nav-links ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-main {
+.nav-links ul li a:hover {
+    color: #00796b;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 5px;
+    }
+    .nav-links ul.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+main { 
     padding: 20px;
 }
 
@@ -226,4 +273,48 @@ footer {
 
 .modal-content {
     border-radius: 10px;
+}
+
+/* Estilo general de la tabla */
+.modal .table {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white; /* Fondo blanco como las cards */
+}
+
+/* Encabezado de la tabla */
+.modal .table thead {
+    background-color: #004d40; /* Verde Benetton oscuro */
+    color: white; /* Texto blanco */
+    text-align: center;
+}
+
+/* Estilo de las celdas */
+.modal .table td, 
+.modal .table th {
+    padding: 12px;
+    vertical-align: middle;
+    border: 1px solid #ddd; /* Bordes ligeros */
+}
+
+/* Estilo para las filas */
+.modal .table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo claro para filas pares */
+}
+
+/* Hover en las filas */
+.modal .table tr:hover {
+    background-color: #e0f2f1; /* Suave verde para resaltar filas */
+}
+
+/* Estilo del total */
+#cart-total {
+    background-color: #004d40; /* Verde Benetton oscuro */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: right;
 }
