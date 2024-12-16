@@ -53,6 +53,18 @@ header .logo img {
     cursor: pointer;
 }
 
+/* Estilos generales para el botón toggle */
+.menu-toggle {
+    display: none;  /* Ocultar el ícono en pantallas grandes por defecto */
+    background-color: transparent;
+    border: none;
+    color: white;  /* Color de las rayas */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;  /* Si deseas bordes redondeados */
+}
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -85,25 +97,18 @@ header .logo img {
         font-size: 18px;
         width: 100%;
     }
-    /*.nav-links ul.show {
-        display: flex;
-    }*/
     .nav-links.active {
         left: 0;  /* Muestra el menú cuando esté activo */
     }
+    /* Solo para pantallas pequeñas */
     .menu-toggle {
-        display: block;
-        /* Mostrar el botón toggle en pantallas pequeñas */
+        display: block;  /* Mostrar el botón toggle en pantallas pequeñas */
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 24px;
-        color: #333;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        background-color: #004d40;  /* Fondo verde oscuro */
+        /*color: white;  /* Rayas blancas */
     }
-
 }
 
 main { 
