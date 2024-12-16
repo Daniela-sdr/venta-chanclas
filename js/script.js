@@ -192,8 +192,8 @@ document.getElementById("cart-icon").addEventListener("click", () => {
 });
 
 function toggleMenu() {
-    const navLinks = document.querySelector(".nav-links ul");
-    navLinks.classList.toggle("show")
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active")
 }
 
 // Seleccionamos el formulario

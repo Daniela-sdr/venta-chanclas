@@ -26,6 +26,7 @@ header .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .nav-links ul {
@@ -38,7 +39,7 @@ header .logo img {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: white;
+    color:white; 
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -54,30 +55,59 @@ header .logo img {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
-    color: white;
-    font-size: 1.5rem;
+    color: #333;
+    font-size: 24px;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Ocultar fuera de la pantalla */
+        width: 250px;
+        height: 100%;
+        background-color: #f9f9f9; /*Fondo Claro */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+        padding: 20px;
+        transition: left 0.3s ease-in-out; /* Animación de deslizamiento */
+        z-index: 1000;
+    }
     .nav-links ul {
         display: none;
         flex-direction: column;
-        background-color: #444;
+        /*background-color: #444;
         position: absolute;
         top: 60px;
-        right: 10px;
-        width: 200px;
+        right: 10px;*/
+        width: 100%;
         border-radius: 5px;
     }
-    .nav-links ul.show {
+    .nav-links ul li a {
+        color: #333; /* Letras oscuras */
+        font-size: 18px;
+        width: 100%;
+    }
+    /*.nav-links ul.show {
         display: flex;
+    }*/
+    .nav-links.active {
+        left: 0;  /* Muestra el menú cuando esté activo */
     }
     .menu-toggle {
         display: block;
+        /* Mostrar el botón toggle en pantallas pequeñas */
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
+
 }
 
 main { 
@@ -187,7 +217,7 @@ footer {
 }
 
 .custom-paragraph {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     margin-top: 20px;
     color: #333;
@@ -266,6 +296,7 @@ footer {
     color: #333;
 }
 
+/* Estilo general de la tabla */
 .table {
     min-width: 100%;
     margin-bottom: 1rem;
@@ -280,13 +311,14 @@ footer {
     white-space: nowrap;
 }
 
+/* Tabla scrollable en pantallas pequeñas */
 @media (max-width: 768px) {
     .table-responsive {
-        overflow-x: auto; -webkit-overflow-scrolling: touch;
-    }
+        overflow-x: auto; -webkit-overflow-scrolling: touch; 
+    } 
     .table th, .table td {
-        font-size: 0.9rem;
-    }
+        font-size: 0.9rem;   /* Reduce el tamaño de la fuente */
+    } 
     .table td:last-child {
         text-align: center;
     }
@@ -300,6 +332,7 @@ footer {
     }
 }
 
+/* Estilo adicional para el texto en pantallas pequeñas */
 @media (max-width: 576px) {
     .table th, .table td {
         padding: 0.5rem;
@@ -310,7 +343,7 @@ footer {
 }
 
 .modal-body {
-    overflow-x: auto;
+    overflow-x: auto; /* Scroll horizontal */
 }
 
 .modal-content {
