@@ -9,16 +9,35 @@ body {
 header {
     background-color: #004d40; /* Verde Benetton oscuro */
     color: white;
-    display: flex;
     padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
 header .logo img {
-    width: 75px;
+    width: 50px;
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    max-height: 50px;
 }
 
 .nav-links {
@@ -49,24 +68,28 @@ header .logo img {
 }
 
 .cart-icon {
-    font-size: 1.2rem;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
     cursor: pointer;
 }
 
 /* Estilos generales para el botón toggle */
 .menu-toggle {
     display: none;  /* Ocultar el ícono en pantallas grandes por defecto */
-    background-color: transparent;
+    background: none;
     border: none;
     color: white;  /* Color de las rayas */
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
-    border-radius: 5px;  /* Si deseas bordes redondeados */
+    border-radius: 5px; 
 }
 
 @media (max-width: 768px) {
     .nav-links {
+        display: none;
         position: fixed;
         top: 0;
         left: -100%; /* Ocultar fuera de la pantalla */
@@ -85,10 +108,10 @@ header .logo img {
     .nav-links ul {
         display: none;
         flex-direction: column;
-        /*background-color: #444;
+        background-color: #444;
         position: absolute;
         top: 60px;
-        right: 10px;*/
+        right: 10px;
         width: 100%;
         border-radius: 5px;
     }
@@ -103,11 +126,11 @@ header .logo img {
     /* Solo para pantallas pequeñas */
     .menu-toggle {
         display: block;  /* Mostrar el botón toggle en pantallas pequeñas */
-        position: absolute;
+        /*position: absolute;
         top: 10px;
         right: 10px;
-        background-color: #004d40;  /* Fondo verde oscuro */
-        /*color: white;  /* Rayas blancas */
+        background-color: #004d40;  
+        color: white; */ 
     }
 }
 
@@ -275,6 +298,8 @@ footer {
   .cart-icon {
     width: 30px;
     height: 30px;
+    margin-left: auto;
+    margin-right: 10px;
   }
   
   #cart-count {

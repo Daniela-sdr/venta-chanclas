@@ -12,12 +12,13 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+      <div class="header-container">
+        <div class="logo-menu">
+          <div class="logo">
             <img src="./assets/image/logo.png" alt="F&C del sur logo">
+          </div>
+          <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
         </div>
-
-        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
-        
         <nav class="nav-links">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -28,10 +29,11 @@
         </nav>
 
             <!-- Ícono del carrito -->
+          
         <div class="cart-icon" id="cart-icon">
             🛒 <span id="cart-count">0</span>
         </div>
-
+          
             <!-- Modal del carrito -->
         <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
