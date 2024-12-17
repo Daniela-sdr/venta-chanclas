@@ -63,12 +63,20 @@ header .logo img {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .cart-icon {
+        font-size: 16px;
         margin-left: 0; /* Elimina márgenes laterales */
         margin-right: 10px; /* Espacio con el borde derecho */
     }
 
     .header-container {
+        display: flex;
         justify-content: space-between; /* Distribuye bien logo, menu y carrito */
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .logo img {
+        max-width: 40px;
     }
 
     .nav-links {
@@ -78,11 +86,12 @@ header .logo img {
     }
 
     .nav-links ul {
-        justify-content: space-evenly;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
     }
 
     .nav-links ul li a {
