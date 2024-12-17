@@ -17,40 +17,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+    padding: 0 10px;
 }
 
 header .logo img {
     width: 50px;
 }
 
-.logo-menu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    max-height: 50px;
-}
-
+/* Estilos del menú */
 .nav-links {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex: 1; /* Ocupa el espacio sobrante */
+    text-align: center; /* Asegura el centrado dentro del espacio */
 }
 
 .nav-links ul {
     list-style: none;
-    display: flex;
+    display: inline-flex; /* Mantiene los elementos alineados horizontalmente */
+    justify-content: center; /* Centrado horizontal */
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -58,7 +41,7 @@ header .logo img {
 
 .nav-links ul li a {
     text-decoration: none;
-    color:white; 
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -67,6 +50,7 @@ header .logo img {
     color: #00796b;
 }
 
+/* Icono del carrito */
 .cart-icon {
     font-size: 18px;
     display: flex;
@@ -75,62 +59,33 @@ header .logo img {
     cursor: pointer;
 }
 
-/* Estilos generales para el botón toggle */
-.menu-toggle {
-    display: none;  /* Ocultar el ícono en pantallas grandes por defecto */
-    background: none;
-    border: none;
-    color: white;  /* Color de las rayas */
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px; 
-}
-
+/* Estilos responsivos */
 @media (max-width: 768px) {
+    .cart-icon {
+        margin-left: 0; /* Elimina márgenes laterales */
+        margin-right: 10px; /* Espacio con el borde derecho */
+    }
+
+    .header-container {
+        justify-content: space-between; /* Distribuye bien logo, menu y carrito */
+    }
+
     .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: -100%; /* Ocultar fuera de la pantalla */
-        width: 250px;
-        height: 100%;
-        background-color: #f9f9f9; /*Fondo Claro */
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 0;
-        padding: 20px;
-        transition: left 0.3s ease-in-out; /* Animación de deslizamiento */
-        z-index: 1000;
+        display: flex; /* Muestra el menú en pantallas pequeñas */
+        flex-direction: row; /* Menu horizontal */
+        justify-content: center; /* Centra los elementos */
     }
+
     .nav-links ul {
-        display: none;
-        flex-direction: column;
-        background-color: #444;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        width: 100%;
-        border-radius: 5px;
+        display: inline-flex;
+        flex-direction: row;
+        gap: 20px;
     }
+
     .nav-links ul li a {
-        color: #333; /* Letras oscuras */
+        color: #333;
         font-size: 18px;
         width: 100%;
-    }
-    .nav-links.active {
-        left: 0;  /* Muestra el menú cuando esté activo */
-    }
-    /* Solo para pantallas pequeñas */
-    .menu-toggle {
-        display: block;  /* Mostrar el botón toggle en pantallas pequeñas */
-        /*position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #004d40;  
-        color: white; */ 
     }
 }
 
@@ -296,12 +251,12 @@ footer {
   }
   
   .cart-icon {
-    width: 30px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: 10px;
-  }
-  
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Espaciado con el menú toggle */
+}
+
   #cart-count {
     position: absolute;
     top: -5px;

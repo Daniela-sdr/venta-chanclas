@@ -11,14 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-      <div class="header-container">
-        <div class="logo-menu">
-          <div class="logo">
+  <header>
+    <div class="header-container">
+        <div class="logo">
             <img src="./assets/image/logo.png" alt="F&C del sur logo">
-          </div>
-          <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
         </div>
+        
         <nav class="nav-links">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -28,44 +26,43 @@
             </ul>
         </nav>
 
-            <!-- Ícono del carrito -->
-          
+        <!-- Ícono del carrito -->
         <div class="cart-icon" id="cart-icon">
             🛒 <span id="cart-count">0</span>
         </div>
-          
-            <!-- Modal del carrito -->
+
+        <!-- Modal del carrito -->
         <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-            <div class="modal-body">
-              <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Subtotal</th>
-                    <th>Acciones</th>
-                  </tr>
-                </thead>
-                <tbody id="cart-table-body">
-                    <!-- Aquí se llenarán los productos dinámicamente -->
-                </tbody>
-              </table>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Subtotal</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-table-body">
+                                    <!-- Aquí se llenarán los productos dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <h5 id="cart-total" class="text-end">Total: $0.00</h5>
+                    </div>
+                </div>
             </div>
-              <h5 id="cart-total" class="text-end">Total: $0.00</h5>
-            </div>
-          </div>
         </div>
-      </div>
-               
-    </header>
+    </div> <!-- Cierre del header-container -->
+</header>
     
     <main>
         <section id="inicio">

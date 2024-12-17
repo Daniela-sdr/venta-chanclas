@@ -192,8 +192,8 @@ document.getElementById("cart-icon").addEventListener("click", () => {
 });
 
 function toggleMenu() {
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active")
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active'); // Muestra/oculta el menú
 }
 
 // Seleccionamos el formulario
@@ -205,3 +205,4 @@ form.addEventListener('submit', function (event) {
         form.reset(); // Limpia todos los campos
     }, 100); 
 });
+
